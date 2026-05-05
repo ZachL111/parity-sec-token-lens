@@ -1,0 +1,10 @@
+{
+  "name": "zachl111/parity-sec-token-lens",
+  "description": "Implement a PHP security tooling project for token graph analysis, using node-edge fixtures and cycle and reachability reports.",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Portfolio\\": "src/"
+    }
+  }
+}
