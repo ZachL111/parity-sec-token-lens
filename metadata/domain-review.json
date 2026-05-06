@@ -1,0 +1,73 @@
+{
+  "repo": "parity-sec-token-lens",
+  "language": "PHP",
+  "category": "Security tooling",
+  "goal": "Implement a PHP security tooling project for token graph analysis, using node-edge fixtures and cycle and reachability reports.",
+  "review_model": {
+    "terms": [
+      "trust boundary",
+      "claim drift",
+      "replay exposure",
+      "policy width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "trust boundary",
+      "signal": 58,
+      "slack": 44,
+      "drag": 9,
+      "confidence": 83,
+      "score": 216,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "claim drift",
+      "signal": 45,
+      "slack": 54,
+      "drag": 10,
+      "confidence": 54,
+      "score": 168,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "replay exposure",
+      "signal": 66,
+      "slack": 37,
+      "drag": 22,
+      "confidence": 59,
+      "score": 162,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "policy width",
+      "signal": 82,
+      "slack": 51,
+      "drag": 14,
+      "confidence": 48,
+      "score": 221,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "trust boundary",
+      "signal": 86,
+      "slack": 50,
+      "drag": 20,
+      "confidence": 58,
+      "score": 220,
+      "lane": "ship"
+    }
+  ]
+}
